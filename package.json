@@ -1,0 +1,42 @@
+{
+  "name": "@magnito/crypt",
+  "version": "0.0.1",
+  "description": "A reusable library for the crypt project",
+  "main": "dist/crypt5.ssr.js",
+  "module": "dist/crypt5.esm.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "scripts": {
+    "serve": " serve dev/serve.js",
+    "build": "rollup --config build/rollup.config.js"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "minimist": "^1.2.6",
+    "node-sass": "^7.0.1",
+    "rollup": "^2.75.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-styles": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^6.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.21"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "rollup-plugin-vue3-svg-inline": "^0.1.1",
+    "sass": "^1.52.1"
+  }
+}
