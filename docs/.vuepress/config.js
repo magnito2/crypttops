@@ -4,6 +4,8 @@ const { defaultTheme } = require('@vuepress/theme-default')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 
 module.exports = {
+
+    base: '/crypttops',
     locales: {
       '/': {
         lang: 'en-US',
