@@ -9,7 +9,7 @@
     "src/*"
   ],
   "scripts": {
-    "serve": " serve dev/serve.js",
+    "serve": "vue-cli-service serve dev/serve.js",
     "build": "rollup --config build/rollup.config.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
@@ -22,6 +22,9 @@
     "@rollup/plugin-image": "^2.1.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
+    "@vue/cli": "^5.0.0-beta.7",
+    "@vue/cli-service": "^5.0.4",
+    "@vue/compiler-sfc": "file:node_modules/vue/compiler-sfc",
     "@vuepress/plugin-register-components": "^2.0.0-beta.46",
     "minimist": "^1.2.6",
     "node-sass": "^7.0.1",
@@ -31,6 +34,8 @@
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.52.2",
+    "sass-loader": "^13.0.0",
     "vuepress": "^2.0.0-beta.46"
   },
   "peerDependencies": {
@@ -40,7 +45,13 @@
     "node": ">=12"
   },
   "dependencies": {
-    "rollup-plugin-vue3-svg-inline": "^0.1.1",
-    "sass": "^1.52.1"
+    "rollup-plugin-vue3-svg-inline": "^0.1.1"
+  },
+  "vue": {
+    "css": {
+      "loaderOptions": {
+        "sass": {}
+      }
+    }
   }
 }
