@@ -5,23 +5,30 @@ import FormInputView from './components/form-input-view.vue'
 import FormSubmitView from './components/form-submit-view.vue'
 import FormTermsView from './components/form-terms-view.vue'
 import APIInputView from './components/api-input-view.vue'
+import ButtonsView from './components/buttons-view.vue'
+import PersonalStatsView from './components/personal-stats-view.vue'
 
 export default {
     name: "ServeDev",
-    components: { 
-        LeaderBoardView, 
-        FormInputView, 
-        FormSubmitView,
-        FormTermsView, 
-        APIInputView 
-      }
+    components: {
+    LeaderBoardView,
+    FormInputView,
+    FormSubmitView,
+    FormTermsView,
+    APIInputView,
+    ButtonsView,
+    PersonalStatsView
+}
 }
 </script>
 
 <template>
   <div id="app">
+    <div class="wrapper-stats">
+      <PersonalStatsView />
+    </div>
     <div class="wrapper-leader">
-      <leaderBoardView/>
+      <LeaderBoardView/>
     </div>
     <div class="wrapper-form">
       <FormInputView />
@@ -32,6 +39,9 @@ export default {
     </div>
     <div class="wrapper-form">
       <APIInputView />
+    </div>
+    <div class="wrapper-buttons">
+      <ButtonsView />
     </div>
   </div>
 </template>

@@ -1,10 +1,12 @@
 <template>
     <div class="input-item" id="input">
-        <img v-if="icon" :src="icon" alt="" class="icon-sign-1">
+        <inline-svg v-if="icon" :src="icon" class="icon-sign-1"/>
         <input :type="type" :placeholder="placeholderComputed" :required ="required">
     </div>
 </template>
 <script>
+import InlineSvg from 'vue-inline-svg';
+
 export default {
     name: 'FormInput',
     props: {
@@ -12,15 +14,24 @@ export default {
         type: { type: String, default: 'text' },
         required: { type: Boolean, default: true}
     },
+    components: {
+        InlineSvg,
+    },
     computed: {
         icon(){
             let iconName;
 
-            if(this.type == 'text' && this.placeholder.toLowerCase().includes('username')) iconName = 'Profile.svg'
+            if(this.type == 'text' && this.placeholder && this.placeholder.toLowerCase().includes('username')) iconName = 'Profile.svg'
             else if(this.type == 'email') iconName = 'Frame.svg'
             else if(this.type == 'password') iconName = 'lock.svg'
 
-            if (iconName) return require(`../../assets/${iconName}`)
+            if(iconName){
+                try {
+                    return require(`../../assets/${iconName}`)
+                } catch(err){
+                    return `/assets/${iconName}`
+                }
+            }
             return null
         },
 

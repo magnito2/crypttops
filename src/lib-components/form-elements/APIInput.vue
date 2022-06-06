@@ -1,12 +1,16 @@
 <template>
-    <label for="input" class="key">
-        <img :src="icon" alt="">
-        <span class="form-label">{{ label }}<div class="slash"></div></span>
-        <input :type="computedType" :placeholder="placeholder" id="input">
-    </label>
+    <div class="wrapper">
+        <label for="input" class="key">
+            <inline-svg :src="icon"></inline-svg>
+            <span class="form-label">{{ label }}</span><div class="slash"></div>
+            <input :type="computedType" :placeholder="placeholder" id="input">
+        </label>
+    </div>
 </template>
 
 <script>
+import InlineSvg from 'vue-inline-svg';
+
 export default {
     name: 'APIInput',
     props: {
@@ -19,7 +23,9 @@ export default {
             }
         }
     },
-
+    components: {
+        InlineSvg
+    },
     computed: {
         computedType(){
             if(this.type == 'key') return 'text';
@@ -31,8 +37,19 @@ export default {
             return  'Enter Your API Secret';
         },
         icon(){
-            if(this.type == 'key') return require('../../assets/Setting.svg');
-            return require('../../assets/lock.svg');
+            if(this.type == 'key') {
+                try{
+                    return require('../../assets/Setting.svg');
+                } catch(err){
+                    return '/assets/Setting.svg';
+                }
+                
+            }
+            try{
+                return require('../../assets/lock.svg');
+            } catch(err){
+                return '/assets/lock.svg';
+            }
         },
         label(){
             if(this.type == 'key') return 'Key';
@@ -61,6 +78,7 @@ export default {
     img{
         position: absolute;
         right: 90%;
+        top: 50%
     }
 
     .form-label{
@@ -77,9 +95,10 @@ export default {
         width: 23px;
         height: 0px;
         top:50%;
-        left: 53px;
+        right: 65%;
         border: 0.5px solid #9F9F9F;
         transform: rotate(90deg);
     }
 }
+
 </style>
