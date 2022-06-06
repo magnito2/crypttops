@@ -5,7 +5,7 @@ const { registerComponentsPlugin } = require('@vuepress/plugin-register-componen
 
 module.exports = {
 
-    base: '/crypttops',
+    base: '/crypttops/',
     locales: {
       '/': {
         lang: 'en-US',
@@ -17,12 +17,7 @@ module.exports = {
     theme: defaultTheme({
       repoLabel: 'Contribute!',
       // git repo here... gitlab, github
-      repo: '',
       docsDir: 'docs',
-      editLinks: true,
-      docsBranch: 'dev',
-      editLinkText: 'Help us improve this page!',
-      search: false,
       locales: {
         '/': {
           label: 'English',
@@ -46,15 +41,28 @@ module.exports = {
               {
                 title: 'Components',
                 collapsable: false,
-                children: ['leader-board']
+                children: [
+                  { text: 'Leaderboard', link: '/components/leader-board'},
+                  { text: 'Personalstats', link: '/components/personal-stats'}, 
+                  { text: 'Buttons', link: '/components/buttons'}, 
+                  { text: 'Inputs',
+                    link: '/components/inputs',
+                    collapsable: true,
+                    children: [
+                      { text: 'FormInputs', link: '/components/inputs/form-input'},
+                      { text: 'APIInputs', link: '/components/inputs/api-input'}
+                    ]
+                  }
+                ]
               }
             ]
           }
         }
       },
-      nav: [
+      navbar: [
         { text: 'Home', link: '/' },
         { text: 'Guide', link: '/guide/' },
+        { text: 'Components', link: '/components/README.md'}
       ]
     }),
 

@@ -5,7 +5,20 @@ export const data = {
   "lang": "en-US",
   "frontmatter": {},
   "excerpt": "",
-  "headers": [],
+  "headers": [
+    {
+      "level": 2,
+      "title": "Installation",
+      "slug": "installation",
+      "children": []
+    },
+    {
+      "level": 2,
+      "title": "Usage",
+      "slug": "usage",
+      "children": []
+    }
+  ],
   "git": {
     "updatedTime": 1654290591000,
     "contributors": [

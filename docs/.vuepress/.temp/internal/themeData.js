@@ -1,11 +1,6 @@
 export const themeData = {
   "repoLabel": "Contribute!",
-  "repo": "",
   "docsDir": "docs",
-  "editLinks": true,
-  "docsBranch": "dev",
-  "editLinkText": "Help us improve this page!",
-  "search": false,
   "locales": {
     "/": {
       "label": "English",
@@ -37,7 +32,33 @@ export const themeData = {
             "title": "Components",
             "collapsable": false,
             "children": [
-              "leader-board"
+              {
+                "text": "Leaderboard",
+                "link": "/components/leader-board"
+              },
+              {
+                "text": "Personalstats",
+                "link": "/components/personal-stats"
+              },
+              {
+                "text": "Buttons",
+                "link": "/components/buttons"
+              },
+              {
+                "text": "Inputs",
+                "link": "/components/inputs",
+                "collapsable": true,
+                "children": [
+                  {
+                    "text": "FormInputs",
+                    "link": "/components/inputs/form-input"
+                  },
+                  {
+                    "text": "APIInputs",
+                    "link": "/components/inputs/api-input"
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -45,7 +66,7 @@ export const themeData = {
       "selectLanguageName": "English"
     }
   },
-  "nav": [
+  "navbar": [
     {
       "text": "Home",
       "link": "/"
@@ -53,16 +74,21 @@ export const themeData = {
     {
       "text": "Guide",
       "link": "/guide/"
+    },
+    {
+      "text": "Components",
+      "link": "/components/README.md"
     }
   ],
-  "navbar": [],
   "logo": null,
   "darkMode": true,
+  "repo": null,
   "selectLanguageText": "Languages",
   "selectLanguageAriaLabel": "Select language",
   "sidebar": "auto",
   "sidebarDepth": 2,
   "editLink": true,
+  "editLinkText": "Edit this page",
   "lastUpdated": true,
   "lastUpdatedText": "Last Updated",
   "contributors": true,

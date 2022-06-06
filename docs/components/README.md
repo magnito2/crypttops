@@ -2,4 +2,5 @@
 
 This is the index page for all the documented components.
 
-- [LeaderBoard](/components/leader-board)
+- [LeaderBoard](/crypttops/components/leader-board)
+- [PersonalStats](/crypttops/components/personal-stats)
