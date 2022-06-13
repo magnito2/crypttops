@@ -14,6 +14,11 @@ import { Input } from '@magnito/crypttops-library/formelements';
 export default {
     components: {
         Input
+    },
+    data(){
+        return {
+            username: "",
+        }
     }
 }
 </script>
@@ -22,6 +27,7 @@ export default {
         <Input
             placeholder="Your Prefered Username"
             type="text"
+            v-model="username"
         >
     </div>
 </template>
@@ -39,6 +45,7 @@ export default {
         <Input
             placeholder="Your Prefered Email"
             type="email"
+            v-model="email"
         >
     </div>
 </template>
@@ -56,6 +63,7 @@ export default {
         <Input
             placeholder="Your Prefered Password"
             type="password"
+            v-model="password"
         >
     </div>
 </template>

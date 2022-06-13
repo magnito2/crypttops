@@ -17,17 +17,17 @@
 
 <script>
 export default {
-    name: 'Paginator',
+    name: 'Pagination',
     props: {
-        goTo: Function,
+        goToPage: Function,
         totalPages: Number,
         currentPage: Number,
-        displayLinks: { type: Number, default: 5}
+        linksToDisplay: { type: Number, default: 5}
     },
     computed: {
         pages(){
             const showPages = [];
-            const steps = Math.floor(this.displayLinks / 2);
+            const steps = Math.floor(this.linksToDisplay / 2);
             let start = this.currentPage - steps;
             let end = this.currentPage + steps;
             if(start < 1){
@@ -47,10 +47,10 @@ export default {
             return showPages;
         },
         showFirstPage(){
-            return this.currentPage > Math.ceil(this.displayLinks/2);
+            return this.currentPage > Math.ceil(this.linksToDisplay/2);
         },
         showLastPage(){
-            return (this.totalPages - Math.floor(this.displayLinks/2)) > this.currentPage;
+            return (this.totalPages - Math.floor(this.linksToDisplay/2)) > this.currentPage;
         }
     },
     methods: {
@@ -59,21 +59,21 @@ export default {
             switch(value){
                 case 'first':
                 case '1':
-                    this.goTo(1);
+                    this.goToPage(1);
                     break;
                 case 'last':
-                    this.goTo(this.totalPages);
+                    this.goToPage(this.totalPages);
                     break;
                 case 'prev':
                     if(this.currentPage <= 1 ) break;
-                    this.goTo(this.currentPage - 1);
+                    this.goToPage(this.currentPage - 1);
                     break;
                 case 'next':
                     if(this.currentPage >= this.totalPages) break;
-                    this.goTo(this.currentPage + 1);
+                    this.goToPage(this.currentPage + 1);
                     break;
                 default:
-                    this.goTo(parseInt(value));
+                    this.goToPage(parseInt(value));
                     break;
             }
         }
@@ -93,6 +93,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
+        color: #9f9f9f;
         li {
             list-style-type: none;
             margin: 5px;

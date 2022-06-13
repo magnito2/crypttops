@@ -12,6 +12,11 @@ import { APIInput } from '@magnito/crypttops-library/formelements';
 export default {
     components: {
         APIInput
+    },
+    data(){
+        return {
+            APIKey: ""
+        }
     }
 }
 </script>
@@ -19,6 +24,7 @@ export default {
     <div>
         <APIInput
             type="key"
+            v-model="APIKey"
         >
     </div>
 </template>
@@ -35,6 +41,7 @@ export default {
     <div>
         <APIInput
             type="secret"
+            v-model="APISecret"
         >
     </div>
 </template>

@@ -18,7 +18,7 @@
               <th v-for="(pair, idx) in pairs" :key="idx">{{ pair }}</th>
             </tr>
             <tr v-for="(userData, idx) in data" :key="idx">
-              <td>{{ startIndex + idx + 1 }}</td>
+              <td>{{ userData.id }}</td>
               <td>{{ userData.name }}</td>
               <td v-for="(pair, idx) in userData.pairs" :key="idx">
                 <span v-if="pair > 0" class="pos">{{ pair }}%</span>
@@ -26,46 +26,18 @@
             </td>
           </tr>
         </table>
-        <hr/>
-        <div class="paginator-wrapper">
-          <Paginator
-            :goTo="goTo"
-            :totalPages="totalPages"
-            :currentPage="currentPage" 
-          />
-        </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Paginator } from './other-elements';
 
 export default {
     name: 'LeaderBoard',
     props: {
       pairs: Array, 
       data: Array, 
-      handlePaginator: Function, 
-      totalPages: Number, 
-      currentPage: Number,
-      pageItemsNo: Number,
     },
-    components: {
-      Paginator
-    },
-    computed: {
-      startIndex(){
-        return (this.currentPage - 1) * this.pageItemsNo;
-      }
-    },
-    methods: {
-      goTo(page){
-        console.log('We got to Leaderboard')
-        this.handlePaginator(page);
-      }
-    }
-
 }
 </script>
 
@@ -115,16 +87,6 @@ export default {
           th {
             font-weight: 400;
           }
-      }
-
-      hr {
-        width: 95%;
-        border: 1px solid #1d1d1d;
-      }
-
-      .paginator-wrapper {
-        display: flex;
-        justify-content: center;
       }
   }
 

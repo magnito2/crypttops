@@ -48,7 +48,8 @@ module.exports = {
                   { text: 'Buttons', link: '/components/buttons',
                     children: [
                       { text: 'MediumButton', link: '/components/buttons/medium-button'},
-                      { text: 'CTAButton', link: '/components/buttons/cta-button'}
+                      { text: 'CTAButton', link: '/components/buttons/cta-button'},
+                      { text: 'Pagination', link: '/components/buttons/pagination'}
                     ]
                   }, 
                   { text: 'Inputs',

@@ -9,5 +9,3 @@ export * as Buttons from './buttons';
 export * as Modals from './modals';
 
 export * as FormElements from './form-elements';
-
-export * as OtherElements from './other-elements';

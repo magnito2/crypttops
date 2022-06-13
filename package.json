@@ -1,13 +1,13 @@
 {
-  "name": "@magnito/crypttops-library",
+  "name": "@magnito2/crypttops-library",
   "version": "0.0.1",
   "description": "A reusable library for the crypttops project",
   "main": "dist/cjs/index.js",
   "exports": {
-    ".": "dist/esm/index.js",
-    "./buttons": "dist/esm/buttons.js",
-    "./formelements": "dist/esm/formElements.js",
-    "./modals": "dist/esm/modals.js"
+    ".": "./dist/esm/index.js",
+    "./buttons": "./dist/esm/buttons.js",
+    "./formelements": "./dist/esm/formElements.js",
+    "./modals": "./dist/esm/modals.js"
   },
   "files": [
     "dist/*",

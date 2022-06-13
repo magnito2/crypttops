@@ -14,6 +14,11 @@ import { Select } from '@magnito/crypttops-library/formelements';
 export default {
     components: {
         Select
+    },
+    data(){
+        return {
+            selected: null
+        }
     }
 }
 </script>
@@ -22,6 +27,7 @@ export default {
         <Select
             :options="['Tier 0', 'Tier 1', 'Tier 2']"
             defaultText = "Select tier"
+            v-model="selected"
         >
     </div>
 </template>

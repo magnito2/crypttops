@@ -1,11 +1,18 @@
 # CRYPTTOPS COMPONENT LIBRARY
 
-![crypttops logo](docs/.vuepress/public/logo.svg)
+![crypttops logo](https://magnito2.github.io/crypttops/logo.svg)
 
-This is a library of components to be used in creating the crypttops trading bot frontend.
-The library is based on vue.js and crypttops theme.
+This is a library of reusable components
 
 It contains
 - Form Inputs
 - Buttons
 - Tables
+- Pagination
+- Modals
+
+## Installation
+`npm i @magnito2/crypttops-library`
+
+## Usage
+check out [documentation](https://magnito2.github.io/crypttops/)
