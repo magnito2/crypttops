@@ -1,5 +1,0 @@
-<template><div><h2 id="installation" tabindex="-1"><a class="header-anchor" href="#installation" aria-hidden="true">#</a> Installation</h2>
-<p><code v-pre>npm i @magnito2/crypttops-library</code></p>
-<h2 id="usage" tabindex="-1"><a class="header-anchor" href="#usage" aria-hidden="true">#</a> Usage</h2>
-<p>check the list of <RouterLink to="/components/">components</RouterLink></p>
-</div></template>

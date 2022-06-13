@@ -1,37 +1,40 @@
 <template>
     <div class="input-item" id="input">
-        <inline-svg v-if="icon" :src="icon" class="icon-sign-1"/>
-        <input :type="type" :placeholder="placeholderComputed" :required ="required">
+        <img v-if="icon" :src="icon" alt="" class="icon-sign-1"/>
+        <input 
+            :type="type" 
+            :placeholder="placeholderComputed" 
+            :required ="required" 
+            :value="modelValue"
+            @input='$emit("update:modelValue", $event.target.value)'
+        >
     </div>
 </template>
 <script>
-import InlineSvg from 'vue-inline-svg';
+import profileIcon from '../../assets/Profile.svg';
+import frameIcon from '../../assets/Frame.svg';
+import lockIcon from '../../assets/lock.svg';
 
 export default {
     name: 'FormInput',
     props: {
         placeholder : String,
         type: { type: String, default: 'text' },
-        required: { type: Boolean, default: true}
+        required: { type: Boolean, default: true},
+        modelValue: String
     },
     components: {
-        InlineSvg,
+        profileIcon,
+        frameIcon,
+        lockIcon
     },
     computed: {
         icon(){
-            let iconName;
 
-            if(this.type == 'text' && this.placeholder && this.placeholder.toLowerCase().includes('username')) iconName = 'Profile.svg'
-            else if(this.type == 'email') iconName = 'Frame.svg'
-            else if(this.type == 'password') iconName = 'lock.svg'
+            if(this.type == 'text' && this.placeholder && this.placeholder.toLowerCase().includes('username')) return profileIcon;
+            else if(this.type == 'email') return frameIcon;
+            else if(this.type == 'password') return lockIcon;
 
-            if(iconName){
-                try {
-                    return require(`../../assets/${iconName}`)
-                } catch(err){
-                    return `/assets/${iconName}`
-                }
-            }
             return null
         },
 
@@ -48,10 +51,6 @@ export default {
 <style lang="scss" scoped>
 .input-item {
     position: relative;
-    
-    img{
-        height:auto;
-    }
 
     input{
         height:55px;

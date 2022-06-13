@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="doc-wrapper">
     <LeaderBoard 
       :pairs="pairs"
       :data="leaders"
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import LeaderBoard from '../../../../src/lib-components/LeaderBoard.vue';
+import { LeaderBoard } from '../../../../dist/esm';
 export default {
     name: "leader-board-doc",
     components: { LeaderBoard },
@@ -35,9 +35,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.table {
-  table {
-    border: none;
-  }
+.doc-wrapper {
+  padding: 10px;
 }
 </style>

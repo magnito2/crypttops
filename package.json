@@ -2,8 +2,13 @@
   "name": "@magnito/crypttops-library",
   "version": "0.0.1",
   "description": "A reusable library for the crypttops project",
-  "main": "dist/crypt5.ssr.js",
-  "module": "dist/crypt5.esm.js",
+  "main": "dist/cjs/index.js",
+  "exports": {
+    ".": "dist/esm/index.js",
+    "./buttons": "dist/esm/buttons.js",
+    "./formelements": "dist/esm/formElements.js",
+    "./modals": "dist/esm/modals.js"
+  },
   "files": [
     "dist/*",
     "src/*"
@@ -34,6 +39,7 @@
     "rollup-plugin-styles": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-vue": "^6.0.0",
+    "rollup-plugin-vue3-svg-inline": "^0.1.1",
     "sass": "^1.52.2",
     "sass-loader": "^13.0.0",
     "vuepress": "^2.0.0-beta.46"
@@ -45,8 +51,8 @@
     "node": ">=12"
   },
   "dependencies": {
-    "rollup-plugin-vue3-svg-inline": "^0.1.1",
-    "vue-inline-svg": "^3.1.0"
+    "vue-inline-svg": "^3.1.0",
+    "vue-router": "^4.0.15"
   },
   "vue": {
     "css": {

@@ -14,11 +14,14 @@
   }
 </script>
 
-<style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+<style lang="scss">
+table {
+    border: none;
+}
 
 .demo {
     background: #1d1d1d;
     font-family: 'Poppins', sans-serif;
+
 }
 </style>

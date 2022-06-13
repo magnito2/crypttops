@@ -1,17 +1,20 @@
 <template>
-  <div>
+  <div class="wrapper">
       <PersonalStats />
   </div>
 </template>
 
 <script>
-import PersonalStats from '../../../../src/lib-components/PersonalStats.vue'
+import { PersonalStats } from '../../../../dist/esm';
 export default {
   components: { PersonalStats },
 
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.wrapper {
+  padding: 10px;
+}
 
 </style>

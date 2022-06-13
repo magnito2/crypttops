@@ -89,13 +89,24 @@ const buildFormats = [];
 if (!argv.format || argv.format === 'es') {
   const esConfig = {
     ...baseConfig,
-    input: 'src/entry.esm.js',
-    external,
-    output: {
-      file: 'dist/crypt5.esm.js',
-      format: 'esm',
-      exports: 'named',
+    input: {
+      index: 'src/entry.esm.js',
+      buttons: 'src/lib-components/buttons/index.js',
+      formElements: 'src/lib-components/form-elements/index.js',
+      modals: 'src/lib-components/modals/index.js',
     },
+    external,
+    output: [
+      {
+        dir: 'dist/esm',
+        format: 'esm',
+        exports: 'named',
+      },
+      {
+        dir: 'dist/cjs',
+        format: 'esm',
+      }
+    ],
     plugins: [
       replace(baseConfig.plugins.replace),
       ...baseConfig.plugins.preVue,
@@ -124,7 +135,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/crypt5.ssr.js',
+      file: 'dist/crypt.ssr.js',
       format: 'cjs',
       name: 'Crypt5',
       exports: 'auto',
@@ -147,7 +158,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/crypt5.min.js',
+      file: 'dist/crypt.min.js',
       format: 'iife',
       name: 'Crypt5',
       exports: 'auto',

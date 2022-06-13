@@ -3,7 +3,11 @@
 </template>
 
 <script>
+import { Submit as FormSubmit } from '../../dist/esm/formElements'
 export default {
+  components: {
+    FormSubmit
+  }
 
 }
 </script>

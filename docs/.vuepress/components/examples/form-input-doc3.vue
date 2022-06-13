@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Input from '../../../../src/lib-components/form-elements/Input.vue'
+import { Input } from '../../../../dist/esm/formElements'
 export default {
   components: { Input },
 

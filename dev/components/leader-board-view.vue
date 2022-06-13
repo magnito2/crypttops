@@ -3,33 +3,45 @@
         <LeaderBoard
             :data = 'leaders'
             :pairs = 'pairs'
+            :handlePaginator = "goToPage"
+            :totalPages="totalPages"
+            :currentPage="currentPage"
+            :pageItemsNo="pageItemsNo"
         />
     </div>
 </template>
 <script>
+import { LeaderBoard } from './../../src/lib-components';
+import { store } from '../store';
+
 export default {
     name: 'leader-board-view',
+    components: {
+      LeaderBoard,
+    },
     data(){
-        return {
-        leaders: [
-        {
-          name: 'John Mitchel D.',
-          pairs: [1.234, 3.245, 2.650, -0.34743]
-        },
-        {
-          name: 'Liam',
-          pairs: [-1.234, 3.245, -2.650, 0.34743]
-        },
-        {
-          name: 'Tony Starks',
-          pairs: [10.234, 30.245, -15.650, 34.743]
-        },
-        ],
-        pairs: ['ETHUSD','BTCUSD', 'XRPUSD', 'EOSUSD']
+      return {
+        store,
+        currentPage: 1,
+        pageItemsNo: 10
       }
     },
-    setup() {
-        
+    computed: {
+      leaders(){
+        return this.store.getLeadersPage(this.currentPage, this.pageItemsNo)
+      },
+      pairs(){
+        return this.store.getLeadersPairs()
+      },
+      totalPages(){
+        return this.store.getTotalPages(this.pageItemsNo)
+      }
     },
+    methods: {
+      goToPage(pageNo){
+        console.log('We got to view')
+        this.currentPage = pageNo;
+      }
+    }
 }
 </script>

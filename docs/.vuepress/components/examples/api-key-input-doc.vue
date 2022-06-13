@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import APIInput from '../../../../src/lib-components/form-elements/APIInput.vue'
+import { APIInput } from '../../../../dist/esm/formElements';
 export default {
   components: { APIInput },
 
@@ -16,7 +16,7 @@ export default {
 
 <style>
 .input-wrapper {
-    padding: 0px;
+    padding: 10px 20px;
     width: 50%;
 }
 </style>

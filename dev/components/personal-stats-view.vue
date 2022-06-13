@@ -5,8 +5,12 @@
 </template>
 
 <script>
+import { PersonalStats } from '../../dist/esm';
 export default {
-
+  name: 'PersonalStatsView',
+  components: {
+    PersonalStats
+  }
 }
 </script>
 

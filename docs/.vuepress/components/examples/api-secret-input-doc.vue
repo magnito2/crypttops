@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import APIInput from '../../../../src/lib-components/form-elements/APIInput.vue'
+import { APIInput } from '../../../../dist/esm/formElements';
 export default {
   components: { APIInput },
 

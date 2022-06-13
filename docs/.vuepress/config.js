@@ -1,6 +1,7 @@
 // config.js
 const { path } = require('@vuepress/utils')
-const { defaultTheme } = require('@vuepress/theme-default')
+// const { defaultTheme } = require('@vuepress/theme-default')
+const { localTheme } = require('./theme')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 
 module.exports = {
@@ -9,12 +10,12 @@ module.exports = {
     locales: {
       '/': {
         lang: 'en-US',
-        title: 'Crypttops Library 🥂',
+        title: 'Crypttops Library',
         description: 'Documentation site for the Crypttops Vue component library plugin'
       }
     },
   
-    theme: defaultTheme({
+    theme: localTheme({
       repoLabel: 'Contribute!',
       // git repo here... gitlab, github
       docsDir: 'docs',
@@ -44,13 +45,29 @@ module.exports = {
                 children: [
                   { text: 'Leaderboard', link: '/components/leader-board'},
                   { text: 'Personalstats', link: '/components/personal-stats'}, 
-                  { text: 'Buttons', link: '/components/buttons'}, 
+                  { text: 'Buttons', link: '/components/buttons',
+                    children: [
+                      { text: 'MediumButton', link: '/components/buttons/medium-button'},
+                      { text: 'CTAButton', link: '/components/buttons/cta-button'}
+                    ]
+                  }, 
                   { text: 'Inputs',
                     link: '/components/inputs',
                     collapsable: true,
                     children: [
-                      { text: 'FormInputs', link: '/components/inputs/form-input'},
-                      { text: 'APIInputs', link: '/components/inputs/api-input'}
+                      { text: 'Input', link: '/components/inputs/form-input'},
+                      { text: 'APIInput', link: '/components/inputs/api-input'},
+                      { text: 'Select', link: '/components/inputs/form-select'},
+                      { text: 'Submit', link: '/components/inputs/form-submit'},
+                      { text: 'Terms', link: '/components/inputs/form-terms'}
+                    ]
+                  },
+                  { text: 'Modals',
+                    link: '/components/modals',
+                    children: [
+                      { text: 'ModalBase', link: '/components/modals/modal-base'},
+                      { text: 'APIModal', link: '/components/modals/api-modal'},
+                      { text: 'TierUpdateModal', link: '/components/modals/tier-update-modal'}
                     ]
                   }
                 ]

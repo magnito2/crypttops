@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import CTAButton from '../../../../src/lib-components/buttons/CTAButton.vue'
+import { CTAButton } from '../../../../dist/esm/buttons';
 export default {
   components: { CTAButton },
   methods: {

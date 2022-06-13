@@ -1,4 +1,4 @@
-# Form Input
+# Input
 Use this input element to get info from the user in Signup and Login forms.
 Fields included include username, email and password
 You can customize the field by passing custom icon or change placeholder text 
@@ -9,17 +9,17 @@ You can customize the field by passing custom icon or change placeholder text
 ```js:no-v-pre
 // 
 <script>
-import { FormInput } from '@magnito/crypttops-library';
+import { Input } from '@magnito/crypttops-library/formelements';
 
 export default {
     components: {
-        FormInput
+        Input
     }
 }
 </script>
 <template>
     <div>
-        <FormInput
+        <Input
             placeholder="Your Prefered Username"
             type="text"
         >
@@ -36,7 +36,7 @@ export default {
 
 <template>
     <div>
-        <FormInput
+        <Input
             placeholder="Your Prefered Email"
             type="email"
         >
@@ -53,7 +53,7 @@ export default {
 
 <template>
     <div>
-        <FormInput
+        <Input
             placeholder="Your Prefered Password"
             type="password"
         >
