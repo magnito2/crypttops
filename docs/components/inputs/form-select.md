@@ -9,7 +9,7 @@ Select Field
 ```js:no-v-pre
 // 
 <script>
-import { Select } from '@magnito/crypttops-library/formelements';
+import { Select } from '@magnito2/crypttops-library/formelements';
 
 export default {
     components: {

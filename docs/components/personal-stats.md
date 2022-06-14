@@ -8,7 +8,7 @@ Displays the current user's performance statistics
 ```js:no-v-pre
 // 
 <script>
-import { PersonalStats } from '@magnito/crypttops-library';
+import { PersonalStats } from '@magnito2/crypttops-library';
 
 export default {
     

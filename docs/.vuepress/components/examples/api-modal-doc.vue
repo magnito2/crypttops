@@ -2,10 +2,11 @@
   <div class="wrapper">
       <medium-button value="Open Modal" :action="toggleModal" />
       <Teleport to="#modal-port">
-          <APIModal v-if="showModal" :closeModal="closeModal"/>
+          <APIModal v-if="showModal" :closeModal="closeModal" v-model="APIData"/>
       </Teleport>
   </div>
 </template>
+
 
 <script>
 import { APIModal } from '../../../../dist/esm/modals';
@@ -17,6 +18,10 @@ export default {
     },
     data(){
         return {
+            APIData : {
+                APIKey: '',
+                APISecret: ''
+            },
             showModal : false
         }
     },

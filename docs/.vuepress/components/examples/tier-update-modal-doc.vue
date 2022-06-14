@@ -2,7 +2,7 @@
   <div class="wrapper">
       <medium-button value="Open Modal" :action="toggleModal" />
       <Teleport to="#modal-port">
-          <TierUpdateModal v-if="showModal" :closeModal="closeModal"/>
+          <TierUpdateModal v-if="showModal" :closeModal="closeModal" v-model="tierUpdateData"/>
       </Teleport>
   </div>
 </template>
@@ -17,6 +17,13 @@ export default {
     },
     data(){
         return {
+            tierUpdateData: {
+                tier: 'Tier 0',
+                date: new Date().toISOString().substr(0, 10),
+                status: 'Inactive',
+                tradingVol: '0',
+                rewards: '0'
+            },
             showModal : false
         }
     },

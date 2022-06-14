@@ -7,7 +7,7 @@ Use this input element to get info from the user in API Key and API Secret field
 ```js:no-v-pre
 // 
 <script>
-import { APIInput } from '@magnito/crypttops-library/formelements';
+import { APIInput } from '@magnito2/crypttops-library/formelements';
 
 export default {
     components: {

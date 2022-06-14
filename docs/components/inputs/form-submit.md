@@ -9,7 +9,7 @@ For submitting form data
 ```js:no-v-pre
 // 
 <script>
-import { Submit } from '@magnito/crypttops-library/formelements';
+import { Submit } from '@magnito2/crypttops-library/formelements';
 
 export default {
     components: {

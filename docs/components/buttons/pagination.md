@@ -12,8 +12,8 @@ Usage with LeaderBoard
 ```js:no-v-pre
 // 
 <script>
-import { Paginator } from '@magnito/crypttops-library/buttons';
-import { LeaderBoard } from '@magnito/crypttops-library';
+import { Paginator } from '@magnito2/crypttops-library/buttons';
+import { LeaderBoard } from '@magnito2/crypttops-library';
 
 import { store } from './store';
 
@@ -65,10 +65,12 @@ export const store = reactive({
         pairs: ['ETHUSD','BTCUSD', 'XRPUSD', 'EOSUSD'],
         leaders: [
         {
+          id: 1,
           name: 'John Mitchel D.',
           pairs: [1.234, 3.245, 2.650, -0.34743]
         },
         {
+          id: 2,
           name: 'Liam',
           pairs: [-1.234, 3.245, -2.650, 0.34743]
         } 

@@ -10,7 +10,7 @@ Use this as a container for modals
 ```js:no-v-pre
 // 
 <script>
-import { ModalBase } from '@magnito/crypttops-library/modals';
+import { ModalBase } from '@magnito2/crypttops-library/modals';
 
 export default {
     components: { ModalBase },
@@ -39,6 +39,7 @@ export default {
 ```
 
 ## Props
+- `showModal` - A bolean value what will display modal when true
 - `closeModal` - A function that when called will close the modal
 - `lightBg` - A boolean value to make the background color more transparent
 

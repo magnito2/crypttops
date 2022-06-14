@@ -9,7 +9,7 @@ Medium sized button
 ```js:no-v-pre
 // 
 <script>
-import { MediumButton } from '@magnito/crypttops-library/buttons';
+import { MediumButton } from '@magnito2/crypttops-library/buttons';
 
 export default {
     methods: {

@@ -8,12 +8,19 @@
 ```js:no-v-pre
 // 
 <script>
-import { TierUpdateModal } from '@magnito/crypttops-library/modals';
+import { TierUpdateModal } from '@magnito2/crypttops-library/modals';
 
 export default {
     components: { TierUpdateModal },
     data(){
         return {
+            tierUpdateData: {
+                tier: 'Tier 0',
+                date: new Date().toISOString().substr(0, 10),
+                status: 'Inactive',
+                tradingVol: '0',
+                rewards: '0'
+            },
             showModal : false,
         }
     }
@@ -29,14 +36,15 @@ export default {
 </script>
 <template>
     <div>
-        <TierUpdateModal v-if="showModal" :closeModal="closeModal" />
+        <TierUpdateModal v-if="showModal" :closeModal="closeModal" v-model="tierUpdateData"/>
     </div>
 </template>
 ```
 
 ## Props
+- `showModal` - A boolean value to close the modal when false
 - `closeModal` - A function that when called will close the modal
-- `lightBg` - A boolean value to make the background color more transparent
+- `v-model` -  An object passed to v-model with fields `tier`, `date`, `status`, `tradingVol` and `rewards`
 
 ## Note
 A modal needs to be removed from the normal flow of the container, thus, the best place to 

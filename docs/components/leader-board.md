@@ -8,7 +8,7 @@ Displays the top performing portfolios
 ```js:no-v-pre
 // 
 <script>
-import { LeaderBoard } from '@magnito/crypttops-library';
+import { LeaderBoard } from '@magnito2/crypttops-library';
 
 export default {
     

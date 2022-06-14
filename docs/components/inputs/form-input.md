@@ -9,7 +9,7 @@ You can customize the field by passing custom icon or change placeholder text
 ```js:no-v-pre
 // 
 <script>
-import { Input } from '@magnito/crypttops-library/formelements';
+import { Input } from '@magnito2/crypttops-library/formelements';
 
 export default {
     components: {

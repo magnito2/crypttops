@@ -9,7 +9,7 @@ Get the user to check the terms and conditions checkbox
 ```js:no-v-pre
 // 
 <script>
-import { Terms } from '@magnito/crypttops-library/formelements';
+import { Terms } from '@magnito2/crypttops-library/formelements';
 
 export default {
     components: {

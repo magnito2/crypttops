@@ -9,12 +9,16 @@ For API Inputs
 ```js:no-v-pre
 // 
 <script>
-import { APIModal } from '@magnito/crypttops-library/modals';
+import { APIModal } from '@magnito2/crypttops-library/modals';
 
 export default {
     components: { APIModal },
     data(){
         return {
+            APIData : {
+                APIKey: '',
+                APISecret: ''
+            },
             showModal : false,
         }
     }
@@ -30,14 +34,16 @@ export default {
 </script>
 <template>
     <div>
-        <APIModal v-if="showModal" :closeModal="closeModal" />
+        <APIModal v-if="showModal" :closeModal="closeModal" v-model="APIData" />
     </div>
 </template>
 ```
 
 ## Props
+- `showModal` - A bolean value via `v-if` to display modal
 - `closeModal` - A function that when called will close the modal
 - `lightBg` - A boolean value to make the background color more transparent
+- `v-model` - v-model binding to an object containing fields with values `APIKey` and `APISecret`
 
 ## Note
 A modal needs to be removed from the normal flow of the container, thus, the best place to 

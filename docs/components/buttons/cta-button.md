@@ -9,7 +9,7 @@ Call to action button
 ```js:no-v-pre
 // 
 <script>
-import { CTAButton } from '@magnito/crypttops-library';
+import { CTAButton } from '@magnito2/crypttops-library';
 
 export default {
     methods: {

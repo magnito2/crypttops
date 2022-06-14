@@ -1,18 +1,28 @@
-# CRYPTTOPS COMPONENT LIBRARY
+# Crypttops components library
 
 ![crypttops logo](https://magnito2.github.io/crypttops/logo.svg)
 
-This is a library of reusable components
+A library of reusable components for the crypttops project
 
-It contains
+contents
 - Form Inputs
 - Buttons
 - Tables
 - Pagination
 - Modals
 
+### Prerequisites
+- `vuejs` - the library is based on vuejs
+- `crypttops project` - the library is meant for use in the project
+
 ## Installation
 `npm i @magnito2/crypttops-library`
 
-## Usage
-check out [documentation](https://magnito2.github.io/crypttops/)
+## [Documentation](https://magnito2.github.io/crypttops/)
+Check out the [documentation](https://magnito2.github.io/crypttops/)
+
+## Built With
+[vue.js](https://vuejs.org/)
+
+## Authors
+[magnito2](https://github.com/magnito2)

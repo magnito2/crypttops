@@ -4,19 +4,19 @@ export const store = reactive({
     leaders_data: {
         pairs: ['ETHUSD','BTCUSD', 'XRPUSD', 'EOSUSD'],
         leaders: [
-        {
-          name: 'John Mitchel D.',
-          pairs: [1.234, 3.245, 2.650, -0.34743]
-        },
-        {
-          name: 'Liam',
-          pairs: [-1.234, 3.245, -2.650, 0.34743]
-        },
-        {
-          name: 'Tony Starks',
-          pairs: [10.234, 30.245, -15.650, 34.743]
-        },
-        {
+          {
+            name: 'John Mitchel D.',
+            pairs: [1.234, 3.245, 2.650, -0.34743]
+          },
+          {
+            name: 'Liam',
+            pairs: [-1.234, 3.245, -2.650, 0.34743]
+          },
+          {
+            name: 'Tony Starks',
+            pairs: [10.234, 30.245, -15.650, 34.743]
+          },
+          {
             name: 'John Mitchel D.',
             pairs: [1.234, 3.245, 2.650, -0.34743]
           },
@@ -213,7 +213,8 @@ export const store = reactive({
     getLeadersPage(pageNo = 1, pageItemsNo = 10){
         const startIdx = (pageNo - 1) * pageItemsNo;
         const endIdx = pageNo * pageItemsNo;
-        return this.leaders_data.leaders.slice(startIdx, endIdx);
+        const data = this.leaders_data.leaders.slice(startIdx, endIdx);
+        return data.map((leader, idx) => ({ ...leader, id: startIdx + idx + 1}))
     },
     getLeadersPairs(){
         return this.leaders_data.pairs;
