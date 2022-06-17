@@ -13,3 +13,5 @@ export { default as APIInput } from './APIInput.vue';
 export { default as Submit } from './Submit.vue';
 
 export { default as Terms } from './Terms.vue';
+
+export { default as DatePicker2 } from './DatePicker2.vue';

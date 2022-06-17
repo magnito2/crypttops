@@ -1,3 +1,5 @@
+[[toc]]
+
 # Getting Started
 
 ## Installation
@@ -5,3 +7,5 @@
 
 ## Usage
 Check out [components](/crypttops/components) for information on the available components
+
+## Components

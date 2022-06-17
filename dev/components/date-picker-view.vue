@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { DatePicker } from '../../dist/esm/formElements';
+import { DatePicker2 } from '../../src/lib-components/form-elements';
 export default {
   name: 'DatePickerView',
   components: {

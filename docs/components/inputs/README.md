@@ -5,3 +5,4 @@ The input elements to be used to create forms.
 - [Submit](/crypttops/components/inputs/form-submit)
 - [Terms](/crypttops/components/inputs/form-terms)
 - [APIInput](/crypttops/components/inputs/form-submit)
+- [DatePicker2](/crypttops/components/inputs/date-picker-2)

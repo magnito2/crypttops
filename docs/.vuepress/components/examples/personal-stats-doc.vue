@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="stats-wrapper">
       <PersonalStats />
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper {
+.stats-wrapper {
   padding: 10px;
 }
 

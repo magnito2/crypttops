@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { Input as FormInput, Select as FormSelect, DatePicker } from '../../src/lib-components/form-elements';
+import { Input as FormInput, Select as FormSelect, DatePicker2 as DatePicker } from '../../src/lib-components/form-elements';
 
 export default {
     components: {
@@ -58,7 +58,7 @@ export default {
             email: '',
             password: '',
             fruit: 'Orange',
-            ranDate: new Date().toISOString().substr(0, 10)
+            ranDate: new Date(2020, 10, 1).toLocaleDateString()
         }
     }
 }

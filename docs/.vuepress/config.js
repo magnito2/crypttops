@@ -60,7 +60,8 @@ module.exports = {
                       { text: 'APIInput', link: '/components/inputs/api-input'},
                       { text: 'Select', link: '/components/inputs/form-select'},
                       { text: 'Submit', link: '/components/inputs/form-submit'},
-                      { text: 'Terms', link: '/components/inputs/form-terms'}
+                      { text: 'Terms', link: '/components/inputs/form-terms'},
+                      { text: 'Datepicker2', link: '/components/inputs/date-picker-2'}
                     ]
                   },
                   { text: 'Modals',
