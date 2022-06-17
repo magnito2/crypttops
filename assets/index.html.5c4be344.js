@@ -1,0 +1,1 @@
+const t={key:"v-0d45e249",path:"/components/modals/",title:"Modals",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1655132202e3,contributors:[{name:"Magnus",email:"magnusotwani@gmail.com",commits:1}]},filePathRelative:"components/modals/README.md"};export{t as data};

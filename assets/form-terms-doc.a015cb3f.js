@@ -1,0 +1,1 @@
+import{g as o}from"./DatePicker2-2be58a04.de01e14d.js";import{_ as r,r as s,o as t,c,b as _}from"./app.0c602c3b.js";import"./style-inject.es-1f59c1d0.4d4a4d30.js";const n={components:{Terms:o}},a={class:"input-wrapper"};function m(p,i,f,d,l,u){const e=s("Terms");return t(),c("div",a,[_(e)])}var x=r(n,[["render",m],["__file","form-terms-doc.vue"]]);export{x as default};

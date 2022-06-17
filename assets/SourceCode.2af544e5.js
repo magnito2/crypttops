@@ -1,0 +1,1 @@
+import{_ as o,o as r,c,v as t}from"./app.0c602c3b.js";const a={};function n(e,s){return r(),c("div",null,[t(e.$slots,"default")])}var _=o(a,[["render",n],["__file","SourceCode.vue"]]);export{_ as default};

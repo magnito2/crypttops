@@ -1,0 +1,1 @@
+const e={key:"v-5063c666",path:"/components/inputs/date-picker-2.html",title:"Datepicker Input",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"Usage",slug:"usage",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"components/inputs/date-picker-2.md"};export{e as data};

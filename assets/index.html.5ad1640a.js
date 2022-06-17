@@ -1,0 +1,1 @@
+const t={key:"v-38aa6c26",path:"/components/inputs/",title:"Form Elements",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1655132202e3,contributors:[{name:"Magnus",email:"magnusotwani@gmail.com",commits:2}]},filePathRelative:"components/inputs/README.md"};export{t as data};

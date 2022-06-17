@@ -1,0 +1,45 @@
+import{_ as a,r as e,o as p,c as t,b as o,a as n,e as r,d as l}from"./app.0c602c3b.js";const c={},i=n("h1",{id:"leaderboard",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#leaderboard","aria-hidden":"true"},"#"),r(" LeaderBoard")],-1),u=n("p",null,"Displays the top performing portfolios",-1),d=l(`<h2 id="usage" tabindex="-1"><a class="header-anchor" href="#usage" aria-hidden="true">#</a> Usage</h2><div class="language-javascript ext-js line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// </span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> LeaderBoard <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@magnito2/crypttops-library&#39;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>LeaderBoard
+            <span class="token operator">:</span>pairs<span class="token operator">=</span><span class="token string">&quot;pairs&quot;</span>
+            <span class="token operator">:</span>data<span class="token operator">=</span><span class="token string">&quot;data&quot;</span>
+        <span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="source-code" tabindex="-1"><a class="header-anchor" href="#source-code" aria-hidden="true">#</a> Source Code</h2><div class="language-vue ext-vue line-numbers-mode"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">\r
+\r
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>\r
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#39;LeaderBoard&#39;</span><span class="token punctuation">,</span>\r
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>\r
+      <span class="token literal-property property">pairs</span><span class="token operator">:</span> Array<span class="token punctuation">,</span> \r
+      <span class="token literal-property property">data</span><span class="token operator">:</span> Array<span class="token punctuation">,</span> \r
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>\r
+<span class="token punctuation">}</span>\r
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>\r
+\r
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="props" tabindex="-1"><a class="header-anchor" href="#props" aria-hidden="true">#</a> Props</h2><p><code>data</code> : An array of Dictionaries containing information to be rendered in the following format</p><div class="language-javascript ext-js line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// Format of data array</span>
+<span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#39;John Mitchel D.&#39;</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">pairs</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1.234</span><span class="token punctuation">,</span> <span class="token number">3.245</span><span class="token punctuation">,</span> <span class="token number">2.650</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.34743</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#39;Liam&#39;</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">pairs</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1.234</span><span class="token punctuation">,</span> <span class="token number">3.245</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2.650</span><span class="token punctuation">,</span> <span class="token number">0.34743</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#39;Tony Starks&#39;</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">pairs</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">10.234</span><span class="token punctuation">,</span> <span class="token number">30.245</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">15.650</span><span class="token punctuation">,</span> <span class="token number">34.743</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>pairs</code> : The names of crypto pairs to be displayed</p><div class="language-javascript ext-js line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// Format of pairs array</span>
+<span class="token punctuation">[</span><span class="token string">&#39;ETHUSD&#39;</span><span class="token punctuation">,</span><span class="token string">&#39;BTCUSD&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;XRPUSD&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;EOSUSD&#39;</span><span class="token punctuation">]</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>`,9);function k(v,m){const s=e("Demo");return p(),t("div",null,[i,u,o(s,{componentName:"examples-leader-board-doc"}),d])}var g=a(c,[["render",k],["__file","leader-board.html.vue"]]);export{g as default};

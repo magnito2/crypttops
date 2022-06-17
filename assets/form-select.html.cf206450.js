@@ -1,0 +1,1 @@
+const e={key:"v-b69b7c0c",path:"/components/inputs/form-select.html",title:"Input",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"Usage",slug:"usage",children:[]}],git:{updatedTime:1655225666e3,contributors:[{name:"Magnus",email:"magnusotwani@gmail.com",commits:3}]},filePathRelative:"components/inputs/form-select.md"};export{e as data};

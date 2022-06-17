@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as n,q as a,$ as r}from"./app.0c602c3b.js";const _={name:"Demo",props:{componentName:{type:String,required:!0}}},c={class:"demo"};function s(m,p,o,i,l,d){return e(),n("div",c,[(e(),a(r(o.componentName)))])}var f=t(_,[["render",s],["__file","Demo.vue"]]);export{f as default};
