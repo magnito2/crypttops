@@ -1,13 +1,11 @@
 <template>
   <div class="wrapper">
     <div class="but-wrapper">
-      <medium-button value="Medium Button" :action="toggleModal" />
+      <medium-button value="Medium Button" :action="toggleModal" :styles="styles.button" />
     </div>
   </div>
   <div class="modal-wrapper">
-    <Teleport to="#modal-port">
       <TierUpdateModal v-if="showModal" :closeModal="closeModal" v-model="tierUpdateData" />
-    </Teleport>
   </div>
 </template>
 
@@ -27,7 +25,19 @@ export default {
         tradingVol: '0',
         rewards: '0'
       },
-      showModal: false
+      showModal: false,
+      styles: {
+        button: {
+          wrapper: {
+            width: '350px',
+            height: '100px'
+          },
+          input: {
+            'border-radius': '50px',
+            background: 'white'
+          }
+        }
+      }
     }
   },
   methods: {
@@ -38,15 +48,6 @@ export default {
       this.showModal = false;
     }
   },
-  beforeMount(){
-        const elem = document.createElement('div');
-        elem.setAttribute('id','modal-port');
-        document.body.appendChild(elem);
-  },
-  unmounted(){
-        const elem = document.getElementById('modal-port');
-        elem.remove();
-  }
 
 }
 </script>
