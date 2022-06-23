@@ -1,6 +1,6 @@
 <template>
-  <div class="btn-wrapper">
-      <input type="submit" :value="value" @click.prevent="action">
+  <div class="btn-wrapper" :style="styling.wrapper">
+      <input type="submit" :value="value" @click.prevent="action" :style="styling.input">
   </div>
 </template>
 
@@ -9,7 +9,15 @@ export default {
   name: 'MediumButton',
   props: {
     action: {type: Function, required: true},
-    value: { type: String, default: 'Activate'}
+    value: { type: String, default: 'Activate'},
+    styles: Object
+  },
+  computed: {
+    styling(){
+      return {
+        ...this.styles,
+      }
+    }
   }
 }
 </script>
